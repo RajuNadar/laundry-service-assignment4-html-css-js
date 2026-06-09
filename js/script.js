@@ -13,8 +13,12 @@ const totalAmount = document.querySelector(".total-amount");
 const itemMessage = document.querySelector(".item-message")
 const bookingForm = document.querySelector("form");
 const confirmMessage = document.querySelector(".confirm-message");
+const subscribed = document.querySelector(".subscribed")
+const inputs = document.querySelectorAll(".subscribe-inputs")
+const subscribeMessage = document.querySelector(".subscribe-message")
 const confirmServiceMessage = document.querySelector(".confirm-service-message")
-const aleartServiceMessage = document.querySelector(".aleart-service-message")
+const alertServiceMessage = document.querySelector(".alert-service-message")
+const username = document.querySelector(".username")
 
 let selectedServices = [];
 
@@ -85,23 +89,26 @@ function toggleService(button, id) {
 bookingForm.addEventListener("submit", (event) => {
   event.preventDefault()
   if (selectedServices.length === 0) {
-    aleartServiceMessage.style.display = "block"
+    alertServiceMessage.style.display = "block"
   } else {
     const emailData = {
       user_email: document.getElementById("email").value,
       user_name: document.getElementById("name").value,
       user_number: document.getElementById("number").value,
+      user_service_charge: totalAmount.textContent,
+      user_selected_service: selectedServices.map(service => service.name).join(", ")
     }
     
     const serviceId = "service_hom1baa"
     const templateId = "template_dk5cfur"
-    
+
     emailjs.send(serviceId, templateId, emailData)
 
+    username.textContent = emailData.user_name
     selectedServices = []
     confirmMessage.style.display = "block"
     confirmServiceMessage.style.display = "block"
-    aleartServiceMessage.style.display = "none"
+    alertServiceMessage.style.display = "none"
     bookingForm.reset()
     
     const allBtn = document.querySelectorAll(".toggleButton")
@@ -119,3 +126,33 @@ bookingForm.addEventListener("submit", (event) => {
     renderCart()
   }
 })
+
+
+subscribed.addEventListener("click", () => {
+  // 1. Create a variable to track if any input is empty
+  let isEmpty = false;
+
+  // 2. Loop through inputs to check if any are empty
+  inputs.forEach(input => {
+    if (input.value.trim() === "") {
+      isEmpty = true;
+    }
+  });
+
+  // 3. Run your conditional logic
+  if (isEmpty) {
+  } else {
+    // Show the success message
+    subscribeMessage.style.display = "block";
+    
+    // Clear all inputs
+    inputs.forEach(input => {
+      input.value = "";
+    }); 
+    
+    // Hide the message after 4 seconds
+    setTimeout(() => {
+        subscribeMessage.style.display = "none";
+    }, 4000);
+  }
+});

@@ -34,7 +34,7 @@
           <li><a href="">Contact Us</a></li>
         </ul>
       </div>
-      <div class="username">Sahil</div>
+      <div class="username"></div>
     </nav>
   </header>
   <section id="hero-section">
@@ -43,7 +43,7 @@
         <h1>Revitalize Your Clothes with Expert <span class="diffrent-style-text">Laundry Services!</span></h1>
         <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and
           rediscover the freshness of your clothes today.</p>
-        <button><a href="#service-section">Book a service today!</a></button>
+        <a href="#service-section">Book a service today!</a>
       </div>
       <div class="right-content">
         <img src="/images/laundry.png" alt="Hero Image">
@@ -70,13 +70,13 @@
   <section id="service-section">
     <div class="service-section-left">
       <div class="service-section-left-heading">
-        <h2>Our Service</h2>
-        <span>Click On The Add Button To Add The Service In Your Cart</span>
+        <h2>Our Services</h2>
+        <span>Click the add button to add a service to your cart</span>
       </div>
       <div class="service-list"></div>
       <span class="service-section-left-bottom">
         <span class="exclamatory-mark">!</span>
-        Add The Services To The Cart And Book Now
+        Add services to your cart and book now
       </span>
     </div>
     <div class="service-section-right">
@@ -93,10 +93,10 @@
           <div class="item-message">
             <h3>!</h3>
             <span>No Service Added</span>
-            <p>Add Service To The Cart From The Service List</p>
-            <h4 class="confirm-service-message"><span class="exclamatory-mark">!</span>Congratulation Your Service Has
-              Been Booked</h4>
-            <h4 class="aleart-service-message"><span class="exclamatory-mark">!</span>Add Service First</h4>
+            <p>Add a service to the cart from the service list</p>
+            <h4 class="confirm-service-message"><span class="exclamatory-mark">!</span>Congratulations! Your service has
+              been booked.</h4>
+            <h4 class="alert-service-message"><span class="exclamatory-mark">!</span>Please add a service first</h4>
           </div>
           <div class="items"></div>
         </div>
@@ -110,21 +110,21 @@
         <form id="bookingForm" action="#sevice-section">
           <div class="input-gap">
             <label for="name">Full Name</label>
-            <input required name="user_name" id="name" type="text" placeholder="your name">
+            <input required name="user_name" id="name" type="text" placeholder="Your Name">
           </div>
           <div class="gap">
             <div class="input-gap">
               <label for="email">Email ID</label>
-              <input required  name="user_email" id="email" type="email" placeholder="your email">
+              <input required  name="user_email" id="email" type="email" placeholder="Your Email">
             </div>
             <div class="input-gap">
               <label for="number">Phone Number</label>
-              <input required name="user_number" id="number" type="text" placeholder="your number">
+              <input required name="user_number" id="number" type="text" placeholder="Your Number">
             </div>
           </div>
           <div>
             <button id="book-now">Book Now</button>
-            <p class="confirm-message"><span class="exclamatory-mark">!</span>Email has been sent successfully</p>
+            <p class="confirm-message"><span class="exclamatory-mark">!</span>Email has been sent successfully!</p>
           </div>
         </form>
       </div>
@@ -133,8 +133,8 @@
   <section id="description-section">
     <div class="description-card">
       <i class="fa-regular fa-truck"></i>
-      <h2>Hassle Free Delivery</h2>
-      <p>Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.</p>
+      <h2>Hassle-Free Delivery</h2>
+      <p>Enjoy seamless service with our convenient pickup and delivery options tailored to your schedule.</p>
     </div>
     <div class="description-card">
       <i class="fa-regular fa-star"></i>
@@ -144,7 +144,7 @@
     <div class="description-card">
       <i class="fa-regular fa-handshake"></i>
       <h2>Quick Support</h2>
-      <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+      <p>We are committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
     </div>
     <div class="description-card">
       <i class="fa-regular fa-money-bill-1"></i>
@@ -153,14 +153,15 @@
     </div>
   </section>
   <section id="subscribe-section">
-    <h2>Subscribe To Our Newsletter.</h2>
-    <div class="subscribe-input">
+    <h2>Subscribe to Our Newsletter</h2>
+    <form class="subscribe-input">
       <div>
-        <input placeholder="Full Name" type="text">
-        <input placeholder="Email" type="text">
+        <input required class="subscribe-inputs" placeholder="Full Name" type="text">
+        <input required class="subscribe-inputs" placeholder="Email Address" type="text">
       </div>
-      <button>Subscribe</button>
-    </div>
+      <button class="subscribed">Subscribe</button>
+      <p class="subscribe-message">Thank you for subscribing! We will send you regular updates.</p>
+    </form>
   </section>
   <section id="footer">
     <footer>
@@ -169,25 +170,25 @@
           <img src="/images/laundry.png" alt="Laundry Logo">
         </div>
         <div>
-          <h2>About us</h2>
-          <p>Revitalize Your Clothes with Expert Laundry Services</p>
+          <h2>About Us</h2>
+          <p>Revitalize your clothes with expert laundry services.</p>
         </div>
       </div>
       <table>
         <thead>
           <tr>
             <th>Important Links</th>
-            <th>Contact</th>
+            <th>Contact Us</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><a href="#description-section">About Us</a></td>
-            <td><a href="#">mail@site.com</a></td>
+            <td><a href="mailto:mail@site.com">mail@site.com</a></td>
           </tr>
           <tr>
             <td><a href="#description-section">Contact Us</a></td>
-            <td><a href="#">+91 7777888899</a></td>
+            <td><a href="tel:+917777888899">+91 7777888899</a></td>
           </tr>
           <tr>
             <td><a href="#">Privacy Policy</a></td>

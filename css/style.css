@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     min-height: 100vh;
@@ -95,9 +98,10 @@ nav {
 .left-content p {
     color: gray;
     margin-top: .5rem;
+    margin-bottom: 2.5rem;
 }
 
-.left-content button {
+.left-content a {
     all: unset;
     cursor: pointer;
     background-color: #F4A7B9;
@@ -105,18 +109,13 @@ nav {
     font: bold;
     border-radius: 1rem;
     padding: 1rem 2rem;
-    margin-top: 1.5rem;
+    margin-top: 6rem;
     font-size: 1.1rem;
     transition: all 0.1s ease-in;
 }
 
-.left-content button:hover{
+.left-content a:hover{
     background-color: #ffb7ca;
-}
-
-.left-content button a{
-    text-decoration: none;
-    color: inherit; 
 }
 
 .right-content {
@@ -430,7 +429,7 @@ nav {
 
 }
 
-.aleart-service-message{
+.alert-service-message{
     display: none;
     color: rgb(255, 88, 88);
 }
@@ -482,6 +481,7 @@ nav {
     margin-top: 5rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    height: 250px;
 }
 
 #subscribe-section h2{
@@ -522,6 +522,13 @@ nav {
 
 .subscribe-input button:hover{
     font-size: 1.1rem;
+}
+
+.subscribe-message{
+    font-size: 1.1rem;
+    display: none;
+    color: white;
+    padding-top: .8rem;
 }
 
 #footer footer{
